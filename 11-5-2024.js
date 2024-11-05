@@ -16,3 +16,46 @@ const myMath={
         return x + y;
     }
 }
+
+const saya ={
+    nama: "Fathur",
+    hobi: "Mancing",
+    kenalan: function (){
+        return `Saya ${this.nama}, Hobi saya ${this.hobi}`
+    }
+}
+
+try{
+console.log(`${saya.nama}`);;
+} catch{
+console.log(`Error!`)
+}
+
+function teriak(msg){
+    try{
+        console.log(msg.toUpperCase());
+    } catch (error){
+        console.log(error);
+        console.log(`Masukkan tipe String, bukan integer`)
+    }
+}
+
+const angka = [1,2,3,4,5,6,7,8,9,10];
+angka.forEach(function(el){
+    if (el%2===0)
+    console.log(el);
+})
+
+const buku =[
+    {
+        title:"Kalkulus",
+        author:"Fathur1"
+    },
+    {
+        title:"Metstat",
+        author:"Fathur2"
+    }
+]
+buku.forEach(function(buku){
+    console.log(`1. Judul: ${buku.title}, dengna Author: ${buku.author}`)
+})
