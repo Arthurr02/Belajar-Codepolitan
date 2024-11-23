@@ -79,3 +79,15 @@ const random =()=> {
 const bukuList2 = buku.map( (buku)=>{
     return buku.title.toUpperCase();
 })
+
+const random1 = () => (
+    a=Math.random()*1000
+);
+
+setTimeout(() => {
+    console.log(`Halo ${random1()}`)
+}, 5000);
+
+const iint = setTimeout(()=>(
+    console.log(random1())
+), 2000)
