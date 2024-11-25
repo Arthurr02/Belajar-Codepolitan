@@ -63,19 +63,19 @@ requestPromise("google.com")
                                 console.log(`succeess: ${response}`);
                             })
                             .catch((error)=>{
-                                console.log(`errror: ${error}`)
+                                console.log(`error: ${error}`)
                             });
                             })
                     .catch((error)=>{
-                        console.log(`errror: ${error}`)
+                        console.log(`error: ${error}`)
                     });
                     })
             .catch((error)=>{
-                console.log(`errror: ${error}`)
+                console.log(`error: ${error}`)
             });
             })
     .catch((error)=>{
-        console.log(`errror: ${error}`)
+        console.log(`error: ${error}`)
     });
 
 // Promise yang Benar
@@ -117,12 +117,15 @@ Promise.all([requestPromise("google.com"), requestPromise("google.com"), request
 
 const contohPromise = () => {
     return new Promise ((resolve, reject)=>{
-        resolve(()=>{
-            `berhasil`;
-        });
-        reject(()=>{
-            `gagal`;
-        });
+        resolve(()=>
+            `berhasil`
+        );
+        reject(()=>
+            `gagal`
+        );
+        random = Math.random();
+        if (random < 0.5) reject();
+        else resolve();
     })   
 }
 
@@ -144,3 +147,14 @@ delayedColorChange("red", 1000)
     .then(()=>delayedColorChange("pink", 1000))
     .then(()=>delayedColorChange("cyan", 1000))
     .then(()=>delayedColorChange("black", 1000))
+
+setInterval(()=>{
+    setTimeout(()=>document.body.style.backgroundColor="pink", 500);
+    setTimeout(()=>document.body.style.backgroundColor="green", 1000);
+    setTimeout(()=>document.body.style.backgroundColor="purple", 1500);
+    setTimeout(()=>document.body.style.backgroundColor="red", 2000);
+    setTimeout(()=>document.body.style.backgroundColor="cyan", 2500);
+    setTimeout(()=>document.body.style.backgroundColor="yellow", 3000);
+    setTimeout(()=>document.body.style.backgroundColor="orange", 3500);
+    document.body.style.backgroundColor = "blue"
+}, 4000)
