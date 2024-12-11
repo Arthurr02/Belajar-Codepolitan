@@ -1,0 +1,17 @@
+/* Beautiful Shadow Example */
+.shadow-box {
+    width: 300px;
+    height: 200px;
+    margin: 50px auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 
+                0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .shadow-box:hover {
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15), 
+                0 8px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
