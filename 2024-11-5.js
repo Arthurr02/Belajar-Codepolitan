@@ -7,7 +7,7 @@ function coba() {
         }
     } else{
         return function (){
-            comnsole.log(`Maaf, anda kurang beruntung`)
+            console.log(`Maaf, anda kurang beruntung`)
         }
     }
 }

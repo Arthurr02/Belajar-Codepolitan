@@ -134,7 +134,7 @@ const delayedColorChange = (color, delay) =>{
         setTimeout(()=>{
             document.body.style.backgroundColor = color;
             resolve()
-        },delay)
+        },delay);
     })
 }
 
